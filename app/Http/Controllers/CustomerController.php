@@ -56,4 +56,15 @@ class CustomerController extends Controller
             $customer->getAllItems
         );
     }
+
+    //temporary....................................................
+
+    public function reltest()
+    {
+        $actual_customer = Customer::findOrFail(1);
+
+        return new JsonResponse(
+            $actual_customer->getAllTikets
+        );
+    }
 }

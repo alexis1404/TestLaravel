@@ -59,6 +59,7 @@ class ItemController extends Controller
         );
     }
 
+    //temporary.............................................
     public function test()
     {
         return new JsonResponse(Item::where('customer_id', 1)

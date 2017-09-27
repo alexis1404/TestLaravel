@@ -12,4 +12,9 @@ class Customer extends Model
     {
         return $this->hasMany(Item::class);
     }
+
+    public function getAllTikets()
+    {
+        return $this->hasMany(Tiket::class);
+    }
 }

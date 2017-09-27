@@ -31,4 +31,6 @@ Route::delete('/item', 'ItemController@delete');
 Route::get('/item/{item}', 'ItemController@getCustomer')
     ->where('customer', '[0-9]+');
 
+//Temporary routes
 Route::get('/test', 'ItemController@test');
+Route::get('/reltest', 'CustomerController@reltest');
