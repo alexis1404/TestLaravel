@@ -34,3 +34,8 @@ Route::get('/item/{item}', 'ItemController@getCustomer')
 //Temporary routes
 Route::get('/test', 'ItemController@test');
 Route::get('/reltest', 'CustomerController@reltest');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
