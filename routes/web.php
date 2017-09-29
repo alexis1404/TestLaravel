@@ -50,5 +50,7 @@ Route::group([
     //     Route::post('machine/reset', 'MachineCrudController@resetConfig');
     // });
     CRUD::resource('users', 'UserCrudController');
+    CRUD::resource('items', 'ItemCrudController');
+    CRUD::resource('customers', 'CustomerCrudController');
 
 });

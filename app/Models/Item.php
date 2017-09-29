@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class User extends Model
+class Item extends Model
 {
     use CrudTrait;
 
@@ -15,10 +15,10 @@ class User extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'users';
+    protected $table = 'items';
     protected $primaryKey = 'id';
     // public $timestamps = false;
-     protected $guarded = ['id'];
+    protected $guarded = ['id'];
     // protected $fillable = [];
     // protected $hidden = [];
     // protected $dates = [];
@@ -34,11 +34,15 @@ class User extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function item()
+    public function user()
     {
-        return $this->hasMany(Item::class);
+        return $this->belongsTo(User::class);
     }
 
+    public function customer()
+    {
+        return $this->belongsTo(Customer::class);
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES
